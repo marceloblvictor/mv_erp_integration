@@ -7,7 +7,7 @@ variables:
   imageName: mygoapi
   containerName: mygoapi
   resourceGroup: my-goapi-rg
-  location: spainnorth
+  location: spaincentral
 
 stages:
 - stage: BuildAndPush
