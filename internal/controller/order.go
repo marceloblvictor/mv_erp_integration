@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"dev.azure.com/MarceloVictor1/_git/mv_erp_integration/internal/common"
-	"dev.azure.com/MarceloVictor1/_git/mv_erp_integration/internal/service"
+	"github.com/marceloblvictor/mv_erp_integration/internal/common"
+	"github.com/marceloblvictor/mv_erp_integration/internal/service"
 )
 
 type OrderController struct {

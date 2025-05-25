@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"dev.azure.com/MarceloVictor1/_git/mv_erp_integration/internal/controller"
+	"github.com/marceloblvictor/mv_erp_integration/internal/controller"
 )
 
 func RegisterRoutes(mux *http.ServeMux, orderCtrl *controller.OrderController) {
