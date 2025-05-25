@@ -9,3 +9,10 @@ variable "resource_group_name" {
   default     = "mv-erp-integration-rg"
   description = "Name of the resource group."  
 }
+
+variable "acr_name" {
+  type        = string
+  default     = "mverpintegration"
+  description = "Name of the azure container registry."  
+}
+

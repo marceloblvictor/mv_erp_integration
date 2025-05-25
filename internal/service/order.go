@@ -1,11 +1,20 @@
 package service
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Azure/azure-sdk-for-go/sdk/data/azcosmos"
+)
 
 type OrderService struct {
+	Container *azcosmos.ContainerClient
 }
 
 func (svc OrderService) GetList() ([]string, error) {
+
+	// query := svc.Container.NewQueryItemsPager("SELECT * FROM c", azcosmos.NewPartitionKey(), &azcosmos.QueryOptions{})
+	// query.NextPage()
+
 	return []string{"Order1", "Order2", "Order3"}, nil
 }
 
