@@ -36,8 +36,17 @@ func (ctrl *OrderController) GetById(w http.ResponseWriter, r *http.Request) {
 }
 
 func (ctrl *OrderController) PostCreate(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusCreated)
-	w.Write([]byte("created!"))
+
+	ctrl.Logger.Info("Creating new order")
+
+	res, err := ctrl.Service.Create()
+	if err != nil {
+		ctrl.ServerError(w, r, err)
+		return
+	}
+
+	w.Header().Add("Content-Type", "application/json")
+	fmt.Fprintf(w, `{"message":"%s"}`, res)
 }
 
 func (ctrl *OrderController) PutUpdate(w http.ResponseWriter, r *http.Request) {

@@ -3,15 +3,15 @@ package model
 type OrderAction int
 
 const (
-	Create OrderAction = iota + 1
-	Update
-	Delete
+	ActionCreate OrderAction = iota + 1
+	ActionUpdate
+	ActionDelete
 )
 
 var actionName = map[OrderAction]string{
-	Create: "create",
-	Update: "update",
-	Delete: "delete",
+	ActionCreate: "create",
+	ActionUpdate: "update",
+	ActionDelete: "delete",
 }
 
 func (oa OrderAction) String() string {
@@ -21,7 +21,7 @@ func (oa OrderAction) String() string {
 type Order struct {
 	ID           string      `json:"id"`
 	Description  string      `json:"description"`
-	CustomerName string      `json:"customer_name"`
+	CustomerName string      `json:"CustomerName"`
 	Total        float64     `json:"total"`
 	ReceivedAt   string      `json:"received_at"`
 	Action       OrderAction `json:"action"`
