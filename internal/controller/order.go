@@ -26,7 +26,7 @@ func (ctrl *OrderController) GetList(w http.ResponseWriter, r *http.Request) {
 func (ctrl *OrderController) GetById(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.PathValue("id"))
 	if err != nil || id <= 0 {
-		http.Error(w, "Invalid ID", http.StatusBadRequest)
+		ctrl.ClientError(w, http.StatusBadRequest, "Invalid ID")
 		return
 	}
 
