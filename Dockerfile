@@ -28,5 +28,6 @@ EXPOSE 8080
 
 ENV COSMOS_ENDPOINT=https://mv-erp-integration-db.documents.azure.com:443
 ENV AZURE_CLIENT_ID=383f12e1-9c1a-42be-bc97-432025916641
+ENV AZURE_TENANT_ID=db9ea2b7-3e25-4cd2-ad77-be6d08ca0db2
 
 CMD ["./server"]
