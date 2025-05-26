@@ -26,7 +26,7 @@ func main() {
 	var cfg cliConfig
 
 	flag.StringVar(&cfg.host, "h", "localhost", "host to run the server on")
-	flag.StringVar(&cfg.port, "p", "80", "port to run the server on")
+	flag.StringVar(&cfg.port, "p", "8080", "port to run the server on")
 
 	loggerHandler := slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
 		Level:     slog.LevelInfo,

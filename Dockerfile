@@ -24,7 +24,7 @@ WORKDIR /app
 
 COPY --from=builder /app/server .
 
-EXPOSE 80
+EXPOSE 8080
 
 ENV COSMOS_ENDPOINT=https://mv-erp-integration-db.documents.azure.com:443
 
