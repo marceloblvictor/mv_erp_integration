@@ -27,6 +27,6 @@ COPY --from=builder /app/server .
 EXPOSE 8080
 
 ENV COSMOS_ENDPOINT=https://mv-erp-integration-db.documents.azure.com:443
-ENV AZURE_CLIENT_ID=383f12e1-9c1a-42be-bc97-432025916641
+
 
 CMD ["./server"]
